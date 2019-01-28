@@ -7,6 +7,7 @@
       "dev": "lerna run dev --stream --no-sort --concurrency 6",
       "test": "lerna run test --stream --no-sort --concurrency 6",
       "lint": "lerna run lint --stream --no-sort --concurrency 6",
+      "precommit": "lerna run precommit --stream --no-sort --concurrency 6",
       "l:version": "lerna version --conventional-commits --no-commit-hooks"
     },
     "devDependencies": {
@@ -25,7 +26,7 @@
     "author": "HelloDeadline",
     "husky": {
       "hooks": {
-        "commit-msg": "yarn test && commitlint -E HUSKY_GIT_PARAMS"
+        "commit-msg": "yarn precommit && commitlint -E HUSKY_GIT_PARAMS"
       }
     }
   }
