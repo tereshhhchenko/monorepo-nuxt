@@ -12,7 +12,7 @@ There is a [convention](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) t
 
 In *monorepo* (monolithic repository) code for many projects is stored in the same repository.
 
-Each package in `packages/` is a project that can be released and deployed independently. A project can be basically anything: a component library, utility library, static website or SPA. One project can have another project (in `packages/`) as a dependecy.
+Each package in `/packages` is a project that can be released and deployed independently. A project can be basically anything: a component library, utility library, static website or SPA. One project can have another project (in `/packages`) as a dependecy.
 
 
 
@@ -84,6 +84,20 @@ A template for commit messages:
 ```
 <type>[optional scope]: <description>
 ```
+`type` must be one of the following:
+
+* `build`: Changes that affect the build system or external dependencies (example scopes: * `gulp`, broccoli, npm)
+* `ci`: Changes to CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+* `docs`: Documentation only changes
+* `feat`: A new feature
+* `fix`: A bug fix
+* `perf`: A code change that improves performance
+* `refactor`: A code change that neither fixes a bug nor adds a feature
+* `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+* `test`: Adding missing tests or correcting existing tests
+
+(Credits: [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines))
+
 
 For example:
 
@@ -118,3 +132,28 @@ yarn l:version -- preminor
 
 ## Creating new package
 
+1. Create new app in `/packages` directory
+```
+cd packages
+```
+```
+yarn create nuxt-app <MY_APP_NAME>
+```
+
+2. Modify `package.json` in *<MY_APP_NAME>* package
+
+* Change version to 0.0.1
+* Add port for `dev` script. For example: `"dev": "nuxt --port 3013"`
+
+* If you want to have another package as a dependency for *<MY_APP_NAME>*, list it in dependencies section of *<MY_APP_NAME>*'s `package.json`. For example: `"dependencies": { "ui-library": "^0.0.1" }`
+
+3. Bootstrap app from repo's *root*
+
+```
+cd ..
+```
+```
+yarn bootstrap
+```
+
+4. Remove useless styleguide configurations or extend them from shared configuration (`.editorconfig`, `.eslint.js`, `.prettierrc` etc)
