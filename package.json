@@ -5,6 +5,7 @@
     "scripts": {
       "bootstrap": "lerna bootstrap",
       "dev": "lerna run dev --stream --no-sort --concurrency 6",
+      "test": "lerna run test --stream --no-sort --concurrency 6",
       "lint": "lerna run lint --stream --no-sort --concurrency 6",
       "l:version": "lerna version --conventional-commits --no-commit-hooks"
     },
@@ -24,7 +25,7 @@
     "author": "HelloDeadline",
     "husky": {
       "hooks": {
-        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        "commit-msg": "yarn test && commitlint -E HUSKY_GIT_PARAMS"
       }
     }
   }
