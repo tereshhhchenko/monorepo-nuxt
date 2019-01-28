@@ -1,0 +1,19 @@
+{
+    "lerna": "2.2.0",
+    "packages": [
+        "packages/*"
+    ],
+    "command": {
+        "version": {
+            "conventionalCommits": true,
+            "ignoreChanges": [
+                "**/*.md",
+                "**/example/**",
+                "**/test/**"
+            ]
+        }
+    },
+    "npmClient": "yarn",
+    "useWorkspaces": true,
+    "version": "independent"
+}

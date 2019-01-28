@@ -1,0 +1,30 @@
+{
+    "name": "monorepo-nuxt",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+      "bootstrap": "lerna bootstrap",
+      "dev": "lerna run dev --stream --no-sort --concurrency 6",
+      "lint": "lerna run lint --stream --no-sort --concurrency 6",
+      "l:version": "lerna version --conventional-commits --no-commit-hooks"
+    },
+    "devDependencies": {
+      "@commitlint/cli": "^7.1.2",
+      "@commitlint/config-conventional": "^7.1.2",
+      "@commitlint/config-lerna-scopes": "^7.1.2",
+      "husky": "^1.0.0-rc.15",
+      "lerna": "^3.4.0"
+    },
+    "repository": "git@github.com:HelloDeadline/monorepo-nuxt.git",
+    "workspaces": [
+      "packages/*"
+    ],
+    "main": "",
+    "license": "",
+    "author": "HelloDeadline",
+    "husky": {
+      "hooks": {
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      }
+    }
+  }
