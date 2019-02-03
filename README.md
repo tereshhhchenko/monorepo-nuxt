@@ -156,4 +156,24 @@ cd ..
 yarn bootstrap
 ```
 
-4. Remove useless styleguide configurations or extend them from shared configuration (`.editorconfig`, `.eslint.js`, `.prettierrc` etc)
+4. Remove useless styleguide configurations or extend them from shared configuration (`.editorconfig`, `.eslint.js`, `.prettierrc`, .nycrc, ava.config.js etc)
+
+5. Fix AVA tests (see [`TROUBLESHOOTING.md` issue #1](./TROUBLESHOOTING.md)) and add nyc as a dependency
+
+```
+cd packages/static-example
+yarn add jsdom-global babel @babel/register require-extension-hooks require-extension-hooks-babel require-extension-hooks-vue nyc -D
+cd ../..
+yarn
+```
+
+
+## TODO
+
+* Coverage
+* Vue component names styleguide
+* Tests (semantics, a11y, snapshots)
+* Script to generate components and tests files
+* CSS lint
+* Eslint configuration
+* PR template

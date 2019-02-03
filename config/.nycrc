@@ -1,0 +1,35 @@
+{
+  "check-coverage": true,
+  "per-file": true,
+  "lines": 75,
+  "statements": 75,
+  "functions": 75,
+  "branches": 75,
+  "include": [
+    "**/*.{js,vue}",
+    "**",
+    "~/**"
+  ],
+  "require": [
+    "@babel/register"
+  ],
+  "exclude": [
+    "**/node_modules/**",
+    "coverage/**",
+    "test/**",
+    "test{,-*}.js",
+    "**/*.test.js",
+    "**/__tests__/**",
+    "test/helpers/*",
+    "*.config.js",
+    "webpack.config.babel.js"
+  ],
+  "ignore-class-method": "methodToIgnore",
+  "extension": [
+    ".vue",
+    ".js"
+  ],
+  "cache": true,
+  "all": true,
+  "report-dir": "./coverage"
+}

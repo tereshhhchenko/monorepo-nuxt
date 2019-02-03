@@ -1,3 +1,3 @@
-export default {
-  require: ['./test/helpers/setup.js']
-}
+import defaultConfig from '../../config/ava.config'
+
+export default defaultConfig

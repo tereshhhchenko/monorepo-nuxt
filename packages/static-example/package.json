@@ -11,7 +11,9 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path ../../.gitignore .",
     "precommit": "yarn lint && yarn test",
-    "test": "ava"
+    "test": "nyc --all ava",
+    "coverage": "nyc report",
+    "cc:ava": "npx ava --reset-cache"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
@@ -19,6 +21,7 @@
     "ui-library": "^0.0.1"
   },
   "devDependencies": {
+    "@babel/register": "^7.0.0",
     "@nuxtjs/eslint-config": "^0.0.1",
     "@vue/test-utils": "^1.0.0-beta.27",
     "ava": "^1.0.1",
@@ -38,6 +41,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "jsdom-global": "^3.0.2",
     "nodemon": "^1.18.9",
+    "nyc": "^13.1.0",
     "prettier": "1.14.3",
     "require-extension-hooks": "^0.3.3",
     "require-extension-hooks-babel": "^0.1.1",

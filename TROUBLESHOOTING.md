@@ -20,3 +20,6 @@ yarn
 ```
 
 Reference: https://github.com/vuejs/vue-test-utils/issues/936#issuecomment-415386167
+
+
+3) Couldn't make alias work with `babel-plugin-webpack-alias-7` in Ava. The issue might be in monorepo. It is extremelly hard to debug this issue, looks like it doesn't worth the effort. 

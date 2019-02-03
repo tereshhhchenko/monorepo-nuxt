@@ -4,8 +4,11 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
+    ecmaVersion: 2017
   },
-  // add your custom rules here
+  env: {
+      es6: true
+  },
   rules: {}
 }
