@@ -2,9 +2,7 @@
   <section class="container">
     <div>
       <logo />
-      <h1 class="title">
-        ui-library
-      </h1>
+      <h1 class="title">ui-library</h1>
       <h2 class="subtitle">
         ui-library
       </h2>
@@ -29,7 +27,7 @@
 </template>
 
 <script>
-import Logo from '../components/Logo.vue'
+import Logo from '@/components/Logo.vue'
 
 export default {
   components: {

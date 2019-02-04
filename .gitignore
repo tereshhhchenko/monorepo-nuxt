@@ -84,3 +84,9 @@ dist
 
 # Service worker
 sw.*
+
+# Nuxt end-to-end tests
+.nuxt-test-*/
+
+# Ava snapshots
+**/test/**/snapshots

@@ -6,12 +6,7 @@
   "functions": 75,
   "branches": 75,
   "include": [
-    "**/*.{js,vue}",
-    "**",
-    "~/**"
-  ],
-  "require": [
-    "@babel/register"
+    "**/*.{js,vue}"
   ],
   "exclude": [
     "**/node_modules/**",
@@ -22,7 +17,9 @@
     "**/__tests__/**",
     "test/helpers/*",
     "*.config.js",
-    "webpack.config.babel.js"
+    "webpack.config.babel.js",
+    "alias.js",
+    ".babelrc.js"
   ],
   "ignore-class-method": "methodToIgnore",
   "extension": [

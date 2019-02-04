@@ -135,8 +135,6 @@ yarn l:version -- preminor
 1. Create new app in `/packages` directory
 ```
 cd packages
-```
-```
 yarn create nuxt-app <MY_APP_NAME>
 ```
 
