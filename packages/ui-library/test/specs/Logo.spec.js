@@ -1,6 +1,7 @@
 import { mount } from '@vue/test-utils'
 import test from 'ava'
 import Vue from 'vue'
+import HelloWorld from 'independent/components/HelloWorld.vue'
 import Logo from '../../components/Logo.vue'
 
 test('is a Vue instance', t => {
@@ -14,4 +15,9 @@ test('renders', t => {
     $el: vm.$el.outerHTML
   }
   t.snapshot(tree)
+})
+
+test('renders component HelloWorld', t => {
+  const LogoComponent = mount(Logo)
+  t.true(LogoComponent.contains(HelloWorld))
 })

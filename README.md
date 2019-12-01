@@ -69,7 +69,7 @@ It will run 'dev' scripts concurrently from every package that has `dev` script 
 
 ### Adding new dependencies
 
-Do it by running `yarn add` from your *package root* (For example, from `packages/ui-library`). Lerna will place the depency to the `node_modules` and symlink it for you. 
+Do it by running `yarn add PackageName` from your *package root* (For example, `cd packages/ui-library && yarn add ./packages/independent`). Lerna will place the depency to the `node_modules` and symlink it for you. 
 
 *Troubleshooting:* if something goes wrong after adding new dependencies, it might be helpful to bootstrap the project with lerna again. To do that run `yarn bootstrap` from repo's root. 
 
@@ -168,7 +168,6 @@ yarn
 
 ## TODO
 
-* Coverage
 * Vue component names styleguide
 * Tests (semantics, a11y, snapshots)
 * Script to generate components and tests files

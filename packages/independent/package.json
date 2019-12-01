@@ -1,16 +1,12 @@
 {
-  "name": "ui-library",
+  "name": "independent",
   "version": "0.0.1",
-  "description": "ui-library",
+  "description": "",
   "author": "HelloDeadline",
   "private": true,
   "scripts": {
-    "dev": "nuxt --port 3012",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
+   "precommit": "yarn lint && yarn test",
     "lint": "eslint --ext .js,.vue --ignore-path ../../.gitignore .",
-    "precommit": "yarn lint && yarn test",
     "test:end-to-end": "ava",
     "test:specs": "ava",
     "test": "nyc --all ava",
@@ -18,15 +14,13 @@
     "cc:ava": "npx ava --reset-cache"
   },
   "dependencies": {
-    "cross-env": "^5.2.0",
-    "independent": "./packages/independent",
-    "nuxt": "^2.3.4",
-    "vue": "^2.5.22"
+    "vue": "^2.5.22",
+    "cross-env": "^5.2.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
     "@vue/test-utils": "^1.0.0-beta.27",
-    "ava": "^1.2.0",
+    "ava": "^1.0.1",
     "babel-eslint": "^8.2.1",
     "browser-env": "^3.2.5",
     "eslint": "^5.0.1",
@@ -43,6 +37,6 @@
     "jsdom-global": "^3.0.2",
     "nodemon": "^1.18.9",
     "nyc": "^13.1.0",
-    "prettier": "1.13.7"
+    "prettier": "1.14.3"
   }
 }
